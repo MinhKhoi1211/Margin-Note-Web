@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Margin Notes: an English learner's notebook</title>
+  
+  <!-- External Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;800&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,700;1,7..72,400&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app">
+    <aside>
+      <div>
+        <h1>Margin Notes</h1>
+        <p>The English you actually meet.</p>
+      </div>
+      <nav id="nav" aria-label="Sections"></nav>
+      <div class="foot">
+        <span id="sync">Saved on this device</span>
+        <button class="lnk" data-a="bk">Backup</button>
+      </div>
+    </aside>
+
+    <main id="main"></main>
+
+    <!-- Backup Modal -->
+    <dialog id="bk">
+      <p><b>Backup</b>: copy this text somewhere safe, or paste a backup and import it.</p>
+      <textarea id="bt" aria-label="Backup data"></textarea>
+      <p id="bm" class="hint"></p>
+      <div class="act">
+        <button class="sec" data-a="exp">Export</button>
+        <button class="sec" data-a="imp">Import</button>
+        <button class="pri" data-a="bkx">Close</button>
+      </div>
+    </dialog>
+  </div>
+
+  <!-- Study Chat Floating Widget -->
+  <div id="chat">
+    <section id="cp" hidden aria-label="Study chat">
+      <header>
+        <b>Study buddy</b>
+        <span>
+          <button class="lnk" data-a="cclr">Clear</button>
+          <button class="lnk" data-a="cx">Close</button>
+        </span>
+      </header>
+      <div id="cm" aria-live="polite"></div>
+      <div id="cq"></div>
+      <div class="cin">
+        <textarea id="cin" rows="1" placeholder="Ask about a word, a rule, or your mistakes" aria-label="Message"></textarea>
+        <button class="pri" data-a="csend">Send</button>
+      </div>
+    </section>
+    <button id="fab" class="pri" data-a="cop" aria-expanded="false">Study chat</button>
+  </div>
+
+  <!-- Datalist for Language Suggestions -->
+  <datalist id="lgs">
+    <option value="Vietnamese">
+    <option value="Chinese">
+    <option value="Spanish">
+    <option value="French">
+    <option value="Portuguese">
+    <option value="Japanese">
+    <option value="Korean">
+    <option value="Arabic">
+    <option value="Russian">
+    <option value="Indonesian">
+    <option value="Thai">
+    <option value="Hindi">
+  </datalist>
+
+  <!-- Application Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/state.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/views.js"></script>
+  <script src="js/ai.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
